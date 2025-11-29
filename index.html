@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Telegram NFT Gifts — Mini App</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div id="app" class="app">
+    <aside class="sidebar">
+      <div class="logo">VIRUS GAME</div>
+      <div class="start-wrap">
+        <button id="openMiniBtn" class="btn primary">START THE GAME</button>
+      </div>
+      <div class="credits">bot · mini app</div>
+      <div class="small muted">Local demo</div>
+    </aside>
+
+    <main class="chat-area">
+      <header class="chat-header">
+        <div class="title">VIRUS GAME BOT</div>
+        <div class="sub">1,029,634 monthly users</div>
+      </header>
+
+      <section class="chat-body" id="chatBody"></section>
+
+      <footer class="composer">
+        <input id="composerInput" placeholder="Write a message..." />
+        <button class="btn" id="composerBtn">😊</button>
+      </footer>
+    </main>
+
+    <!-- Mini App -->
+    <div id="miniApp" class="miniapp hidden">
+      <div class="mini-top">
+        <div class="mini-title">Mini App — NFT Gifts</div>
+        <div class="mini-controls">
+          <div class="balance">Balance: <span id="balanceView">0</span> ★</div>
+          <button id="closeMini" class="btn small">Close</button>
+        </div>
+      </div>
+
+      <div class="mini-body">
+        <nav class="mini-nav">
+          <div class="nav-block">
+            <button data-tab="shop" class="nav-btn active">🏬 Shop</button>
+            <button data-tab="my" class="nav-btn">🎁 My Gifts</button>
+            <button data-tab="profile" class="nav-btn">👤 Profile</button>
+            <button data-tab="market" class="nav-btn">🛒 Marketplace</button>
+            <button data-tab="users" class="nav-btn">🔑 Auth</button>
+          </div>
+        </nav>
+
+        <div class="mini-content" id="miniContent"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- hidden asset to preload (your uploaded image) -->
+  <img id="uploadedAsset" src="/mnt/data/9afd1202-ca20-4dff-9bcc-9d4f43dc0294.png" style="display:none" alt="asset"/>
+
+  <script src="script.js"></script>
+</body>
+</html>

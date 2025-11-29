@@ -1,0 +1,68 @@
+:root{
+  --bg:#f1f5f9;
+  --card:#ffffff;
+  --muted:#6b7280;
+  --accent:#2563eb;
+  --success:#10b981;
+  --danger:#ef4444;
+}
+*{box-sizing:border-box}
+body,html{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,Arial;color:#0f172a;background:var(--bg)}
+.app{display:flex;height:100vh;gap:12px;padding:16px}
+
+/* Sidebar */
+.sidebar{width:88px;background:var(--card);border-radius:12px;padding:12px;display:flex;flex-direction:column;align-items:center;box-shadow:0 6px 18px rgba(2,6,23,0.06)}
+.logo{font-size:10px;color:var(--muted);letter-spacing:1px}
+.start-wrap{margin-top:auto;width:100%}
+.btn{cursor:pointer;border:1px solid #e6e9ef;background:white;padding:8px 10px;border-radius:8px}
+.btn.primary{background:var(--accent);color:white;border:none}
+.btn.small{padding:6px 8px;font-size:13px}
+.credits{font-size:11px;color:var(--muted);margin-top:8px}
+.small{font-size:12px;color:var(--muted)}
+
+/* Chat area */
+.chat-area{flex:1;display:flex;flex-direction:column;background:linear-gradient(180deg,#ecfdf5,#f0f9ff);border-radius:12px;padding:0;overflow:hidden;box-shadow:0 8px 24px rgba(2,6,23,0.06)}
+.chat-header{display:flex;align-items:center;padding:16px;border-bottom:1px solid #eef2f7;background:var(--card)}
+.title{font-weight:700}
+.sub{margin-left:auto;color:var(--muted);font-size:13px}
+.chat-body{padding:28px;overflow:auto;flex:1}
+.message{display:inline-block;background:var(--card);padding:12px;border-radius:12px;box-shadow:0 4px 12px rgba(2,6,23,0.04);margin-bottom:14px}
+.composer{display:flex;gap:8px;padding:12px;border-top:1px solid #eef2f7;background:var(--card)}
+.composer input{flex:1;padding:10px;border-radius:8px;border:1px solid #e6e9ef}
+
+/* Mini app */
+.miniapp{position:fixed;right:32px;bottom:32px;width:820px;height:560px;background:var(--card);border-radius:20px;box-shadow:0 30px 80px rgba(2,6,23,0.18);overflow:hidden;display:flex;flex-direction:column}
+.miniapp.hidden{display:none}
+.mini-top{display:flex;align-items:center;padding:12px;border-bottom:1px solid #eef2f7}
+.mini-title{font-weight:700}
+.mini-controls{margin-left:auto;display:flex;gap:10px;align-items:center}
+.balance{font-size:13px;color:var(--muted)}
+.mini-body{display:flex;flex:1;overflow:hidden}
+.mini-nav{width:200px;border-right:1px solid #f1f5f9;padding:12px;display:flex;flex-direction:column;gap:8px;background:#f8fafc}
+.nav-btn{padding:10px;border-radius:8px;border:none;background:transparent;text-align:left;cursor:pointer}
+.nav-btn.active{background:white;box-shadow:0 6px 18px rgba(2,6,23,0.04)}
+.mini-content{flex:1;padding:16px;overflow:auto}
+
+/* Cards grid */
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.card{background:linear-gradient(135deg,#fff,#fbfdff);padding:12px;border-radius:12px;border:1px solid #eef2f7;display:flex;gap:12px;align-items:center}
+.icon{width:64px;height:64px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.body{flex:1}
+.muted{color:var(--muted)}
+
+/* Modal */
+.modal-back{position:fixed;inset:0;background:rgba(2,6,23,0.5);display:flex;align-items:center;justify-content:center}
+.modal{background:var(--card);padding:16px;border-radius:12px;width:420px;box-shadow:0 20px 60px rgba(2,6,23,0.2)}
+.input{width:100%;padding:8px;border-radius:8px;border:1px solid #e6e9ef;margin-top:8px}
+
+/* emoji color via CSS variable --hue */
+.emoji { font-size:36px; filter: hue-rotate(var(--hue, 0deg)); }
+
+/* admin badge */
+.badge-admin{background:#111827;color:white;padding:6px 8px;border-radius:8px;font-size:12px}
+
+/* responsive */
+@media (max-width:900px){
+  .miniapp{right:12px;left:12px;width:auto}
+  .app{padding:10px}
+}
