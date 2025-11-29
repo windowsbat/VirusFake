@@ -180,7 +180,7 @@ function renderAuth(){
         <button id="loginBtn" class="btn">Login</button>
       </div>
     </div>
-    <div class="small muted" style="margin-top:8px">Note: accounts stored locally. Admin: username <strong>strssler</strong> pass <strong>admin</strong></div>
+    <div class="small muted" style="margin-top:8px">Note: accounts stored locally.
   `;
   document.getElementById('regBtn').onclick = doRegister;
   document.getElementById('loginBtn').onclick = doLogin;
@@ -671,3 +671,4 @@ window.adminAddBalancePrompt = adminAddBalancePrompt;
 window.adminAddNFTPrompt = adminAddNFTPrompt;
 window.adminAddStarsPrompt = adminAddStarsPrompt;
 window.openMini = openMini;
+
